@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>caching paginated list by fetch and service worker demo</title>
+</head>
+<body>
+<h2>caching paginated list by fetch and service worker demo</h2>
+<form name="f_generate">
+<table border="1">
+<tr><th>shopId</th><td><input type="text" name="shopId" value="" size="10"></td></tr>
+<tr><th>genSize</th><td><input type="number" name="genSize" value="100" min="1" required></td></tr>
+</table>
+<input type="button" value="generate" onclick="do_generate(); return false;">
+</form>
+<h3>shopId links</h3>
+<div>
+<ul id="shopid_links"></ul>
+</div>
+</body>
+<script src="js/index.js"></script>
+</html>

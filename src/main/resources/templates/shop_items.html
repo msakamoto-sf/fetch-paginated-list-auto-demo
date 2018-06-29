@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>shop [[${shopId}]] items</title>
+</head>
+<body>
+<h2>shop [[${shopId}]] items</h2>
+<h3>add item</h3>
+<form name="f_add_item">
+label : <input type="text" name="newLabel" size="30" value=""> &nbsp;/&nbsp;
+price : <input type="number" name="newPrice" value="1" min="0"> &nbsp;
+<input type="button" value="add" onclick="add_item();">
+</form>
+
+<h3>item list</h3>
+<form name="f_paginate_param">
+<input type="hidden" name="shopId" data-th-value="${shopId}">
+limit : <input type="number" name="limit" value="100" min="0"> &nbsp;/&nbsp;
+offset : <input type="number" name="offset" value="0" min="0"> &nbsp;
+<input type="button" value="get list" onclick="update_item_table(); return false;">
+</form>
+<br>
+<table id="items_table" border="1">
+<thead>
+<tr>
+<th>id</th>
+<th>label</th>
+<th>price</th>
+<th>last-updated-at</th>
+<th>update</th>
+<th>delete</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</body>
+<script src="/js/shop_items.js"></script>
+</html>
